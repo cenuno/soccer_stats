@@ -1,3 +1,4 @@
+# load necessary modules ----
 import requests
 import json
 from pymongo import MongoClient
@@ -14,16 +15,40 @@ client = MongoClient()
 db = client["soccer"]
 weather = db["weather"]
 
-# Powered by Dark Sky <https://darksky.net/poweredby/>
+# create the WeatherGetter class ----
 class WeatherGetter():
-    """This class gets the weather for Berlin, using Dark Sky's API"""
+    """Retrieve daily weather for Berlin, Germany 
+    
+    Note: Stores the data from the Dark Sky API in a collection called weather
+          within the soccer MongoDB
+
+    Attributes:
+        lat (str): latitudinal coordinate of Berlin, Germany
+        long (str): longitudinal coordinate of Berlin, Germany
+        base_url (str): url to the historical weather data API
+
+    Methods:
+        get_weather(): retrieves Berlin's historical weather data 
+                       for one particular date and stores the data
+                       within the weather collection in the soccer MongoDB
+    """
     def __init__(self):
         self.lat = "52.520008"
         self.long = "13.404954"
         self.base_url = "https://api.darksky.net/forecast/"
     
-    def get_weather(self, date, verbose=True):
-        """Gets the daily weather for Berlin for a particular date."""
+    def get_weather(self, date: str, verbose: bool = True) -> None:
+        """Retrieve the daily weather for Berlin for one particular date
+        
+        Args:
+            date (str): 10-digit epoch date
+            verbose (bool): True/False to print out the integer code of
+                            responded HTTP Status
+
+        Returns:
+            None (but the data is stored within the weather collection in
+                  the soccer MongoDB)
+        """
         # store request url
         url = f"{self.base_url}{key}/{self.lat},{self.long},{date}{exclusions}"
         
@@ -43,7 +68,7 @@ class WeatherGetter():
         output = response.json()
         output["date"] = date
         
-        # insert data into weather table inside the soccer mongodb
+        # insert data into weather collection inside the soccer MongoDB
         weather.insert_one(output)
 
         return None

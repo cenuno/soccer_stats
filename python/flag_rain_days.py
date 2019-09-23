@@ -1,5 +1,5 @@
 """
-Access the 'weather' collection from the 'soccer' Mongodb
+Access the weather collection from the soccer Mongodb
 and identify the rainy days during the 2011 matches
 """
 
