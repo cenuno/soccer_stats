@@ -26,7 +26,7 @@ This project was created on a Macbook Pro running MacOS Mojave.
 
 #### macOS/Linux Packages
 
-To ensure your macOS/Linux machine contains all of the necessary packages, please run [`01_install.sh`](install.sh).
+To ensure your macOS/Linux machine contains all of the necessary packages, please run [`01_install.sh`](01_install.sh).
 
 #### Python
 
