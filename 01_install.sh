@@ -27,7 +27,7 @@ if test ! $(which mongo); then
     brew install mongodb
 fi
 
-# Check for PostgreSQL; install if we dont' have it
+# Check for PostgreSQL; install if we don't have it
 if test ! $(which postgres); then
     echo "Installing PostgreSQL..."
     brew install postgresql
