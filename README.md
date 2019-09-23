@@ -52,7 +52,7 @@ conda list --export > requirements.txt
 
 ### Data
 
-Thank you to [Jörg Eitner](https://www.kaggle.com/laudanum) for publishing his Football Delphi dataset on Kaggle:
+Thank you to [Jörg Eitner](https://www.kaggle.com/laudanum) for publishing his [Football Delphi dataset on Kaggle](https://www.kaggle.com/laudanum/footballdelphi):
 
 > [This] dataset consist[s] of historic match data for the German Bundesliga (1st and 2nd Division) as well as the English Premier League reaching back as far as 1993 up to 2016. 
 
