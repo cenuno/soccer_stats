@@ -24,7 +24,7 @@ berlin_weather = WeatherGetter()
 print("""
 ----Starting API calls----
 
-Exporting data into the 'weather' collection in the 'soccer' MongoDB.
+Exporting data into the weather collection in the soccer MongoDB.
 
 """)
 

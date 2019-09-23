@@ -32,13 +32,21 @@ To ensure your macOS/Linux machine contains all of the necessary packages, pleas
 
 This project used Python 3.7.4 and Anaconda 4.7.12. All Python packages can be found in the [`requirements.txt`](requirements.txt) file.
 
+#### `soccer-env` environment
 To create a new [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) environment to use this repo, run:
 
 ```bash
+# generate the soccer-env environment from the requirements.txt file
 conda create --name soccer-env --file requirements.txt
+# active (go into) the soccer-env environment
 conda activate soccer-env
 ```
 
+Within `soccer-env`, you can run `conda install <package-name>` to install additional packages. To ensure your additions to the repository remain reproducible, generate your own [`requirements.txt`](requirements.txt) with the following code:
+
+```bash
+conda list --export > requirements.txt
+```
 
 ## Acknowledgements
 
