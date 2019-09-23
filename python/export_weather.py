@@ -1,6 +1,6 @@
 """
 Using the epoch dates from 2011 matches, dump the weather data
-into a the 'weather' MongoDB
+into a the weather collection within the soccer MongoDB
 """
 
 # load necessary modules
@@ -36,6 +36,6 @@ for date in df["epoch_date"]:
 print("""
 ----Finished API calls----
 
-Data exported into the 'weather' collection in the 'soccer' MongoDB.
+Data exported into the weather collection in the soccer MongoDB.
 
 """)

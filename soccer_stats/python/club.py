@@ -28,7 +28,7 @@ class Club(object):
         all_stats_df (DataFrame): all clubs season stats (regardless of rain)
 
     Methods:
-        plot_rain_stats(): visiualize season statiistics of rain games
+        plot_rain_stats(): visualize season statiistics of rain games
         plot_stats(): visualize season statistics (regardless of rain)
     """
 
